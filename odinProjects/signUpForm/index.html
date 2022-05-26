@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="containerAll">
+        <div class="backgroundBanner">
+            <div class="logoBanner">
+                <img src="img/odinLogo.png" class="logo">
+                <div class="firmName">Odin</div>   
+            </div>
+            <div class="imgCredit">Photo by Halie West on Unsplash</div> -->
+        </div>
+        <div class="columnContainer">
+            <div class="txtContainer">
+                <p>This is not a real online service!
+                    You know you need something like this
+                    in your life to help you realize your
+                    deepest dreams. Sign up now to get
+                    started.</p>
+                <p>You know you want to.</p>
+            </div>
+            <form action="">
+                <fieldset class="inputContainer">
+                    <legend>Let's do this!</legend>
+                    <div class="row">
+                        <div class="inputLabelContainer">
+                            <label for="firstName" class="inputLabel">First Name</label>
+                            <input type="text" name="firstName" id="firstName" required>
+                        </div>
+                        <div class="inputLabelContainer">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="inputLabelContainer">
+                            <label for="eMail" class="inputLabel">E-Mail</label>
+                            <input type="email" name="eMail" id="eMail" required>
+                        </div>
+                        <div class="inputLabelContainer">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="inputLabelContainer">
+                            <label for="password" class="inputLabel">Password</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                        <div class="inputLabelContainer">
+                            <label for="passwordConfirm">Confirm Password</label>
+                            <input type="password" name="passwordConfirm" id="passwordConfirm" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <button type="submit">Create Account</button>
+                <p style="margin-top: 10px;">Already have an account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+        
+    </div>
+
+</body>
+</html>
