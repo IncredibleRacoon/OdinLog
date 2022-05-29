@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#layoutContainer {
+    display: grid;
+    height: 100vh;
+    grid-template: 50px 90px 1fr / 250px 1fr;
+    grid-template-areas: "sidebar topBarOne"
+                         "sidebar topBarTwo"
+                         "sidebar mainContentContainer";
+
+}
+#sidebar {
+    background-color: red;
+    grid-area: sidebar;
+}
+#topBarOne {
+    background-color: green;
+    grid-area: topBarOne;
+}
+#topBarTwo {
+    background-color: orange;
+    grid-area: topBarTwo;
+}
+#mainContentContainer {
+    background-color: blue;
+    grid-area: mainContentContainer;
+}
+
