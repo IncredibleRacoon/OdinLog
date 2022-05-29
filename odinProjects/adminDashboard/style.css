@@ -1,32 +1,226 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
 #layoutContainer {
     display: grid;
     height: 100vh;
-    grid-template: 50px 90px 1fr / 250px 1fr;
+    grid-template: 50px 90px 1fr / 278px 1fr;
     grid-template-areas: "sidebar topBarOne"
                          "sidebar topBarTwo"
                          "sidebar mainContentContainer";
 
 }
 #sidebar {
-    background-color: red;
+    background-color: rgb(69, 144, 206);
     grid-area: sidebar;
 }
 #topBarOne {
-    background-color: green;
+    background-color: white;
     grid-area: topBarOne;
 }
 #topBarTwo {
-    background-color: orange;
+    background-color: white;
     grid-area: topBarTwo;
+    box-shadow: 0px 6px 0px 0px #d9d9d9;
 }
 #mainContentContainer {
-    background-color: blue;
     grid-area: mainContentContainer;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px;
+    align-items: flex-start;
+    overflow-y: scroll;
+    
 }
 
+.sidebarTopic {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.sidebarIcon {
+    height: 25px;
+}
+.sidebarText {
+    color: white;
+    font-size: 20px;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.topBarContainer {
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    width: calc(100% - 100px);
+    margin: auto;
+}
+#searchbar {
+    margin-right: 10%;
+    margin-top: 10px;
+    height: 30px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    flex: 1;
+}
+#accountName {
+    color: black;
+    font-size: 20px;
+    align-self: center;
+    font-weight: bold;
+}
+
+.topBarContainer > img {
+    height:25px;
+    margin-top: 12.5px;
+}
+
+.opBarContainerTwoTwo {
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 80px);
+    margin: auto;
+}
+
+.greetingContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.greetingContainer > h1 {
+    font-size: 23px;
+    padding: 0;
+    margin: 0;
+}
+.greetingContainer > h2 {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.opBarContainerTwoTwo > img {
+    height: 60px;
+    
+}
+.buttonDiv {
+    background-color: rgb(69, 144, 206);
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100px;
+    border-radius: 40px;
+}
+
+#profilPictureBig {
+    background-color: rgba(69, 144, 206, 0.6);
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.project {
+    
+    background-color: white;
+    border-left: solid 8px rgba(69, 144, 206, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.yourProjects, .announcements, .trending {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+
+    gap: 30px;
+}
+.yourProjects {
+    min-width: 300px;
+    width: 100%;
+    height: 100%; 
+    overflow-y: scroll;
+}
+.announcements, .trending {
+    width: 100%;
+}
+
+.socialContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: end;
+    margin-top: 30px;
+}
+.projectTopic {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+}
+.announcements > ul li:nth-child(-n + 2) {
+    border-bottom: 2px solid grey;
+}
+
+.announcements > ul {
+    list-style-type: none;
+    background-color: white;
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+.accProjPic {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.accProjPic > img {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(69, 144, 206, 0.6);
+    border-radius: 100px;
+    padding: 5px;
+}
+.trending {
+    padding: 0;
+}
+
+.accProj > h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+.accProj > h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+.trendingContainer {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.trenAnn {
+    width: 33%;
+    max-width: 350px;
+    min-width: 250px;
+    height: 100%;
+    overflow-y: scroll;
+}
