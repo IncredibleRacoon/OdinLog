@@ -1,20 +1,32 @@
+var books = [];
 
 
-function Book(title, author, pages, readYetBool) {
+function Book(title, author, pages, pagesRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.readYetBool = readYetBool;
+    this.pagesRead = pagesRead;
 
-    this.info = () => {
-        let informationString = `${this.title} by ${this.author}, ` +
-                                 `${this.pages} pages, ` +
-                                 `${this.readYetBool? "read." : "not read yet."}`
-        return informationString;
+    
+}
+
+function addBookToLibrary() {
+    let title = document.getElementById("titleInput").value;
+    let author = document.getElementById("authorInput").value;
+    let number = document.getElementById("numberInput").value;
+    let numberRead = document.getElementById("numberReadInput").value;
+    document.querySelector("form").reset();
+
+    books.push(new Book(title, author, number, numberRead));
+    redrawBooks();
+}
+
+function redrawBooks() {
+    for (let book of books) {
+        alert(book.title);
+
+        
     }
 }
 
 
-let theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295", false);
-
-console.log(theHobbit.info());
