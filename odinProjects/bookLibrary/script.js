@@ -25,7 +25,7 @@ function redrawBooks() {
     for (let book of books) {
         alert(book.title);
 
-        
+
     }
 }
 
