@@ -9,6 +9,7 @@ html {
     padding: 0;
     height: 100vh;
     position: relative;
+    background-color: #ede9fe;
 }
 body {
     position: absolute;
