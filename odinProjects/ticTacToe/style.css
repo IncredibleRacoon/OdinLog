@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    outline: 2px solid black;
+    color: black;
+    display: flex;
+    text-align: center;
+    font-size: 500%;
+    justify-content: center;
+    align-items: center;
+}
