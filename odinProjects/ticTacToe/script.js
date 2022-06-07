@@ -2,20 +2,27 @@
 const gameBoard = (() => {
 
     let gameBoardValues = Array(9).fill("");
+    let nextPlayer = "O"
 
-    
+    const checkIfWon = () => {
+        
+    }
+
     const placeSymbol = (index) => { 
-        gameBoardValues[index] = symbol;
-        document.getElementsByClassName("square")[index].innerHTML = "X";
-     }
-    
-    const getList = () => gameBoardValues;
+        if (nextPlayer == "X") {
+            nextPlayer = "O";
+        } else {
+            nextPlayer = "X";
+        }
 
-    
+        if (!(document.getElementsByClassName("square")[index].innerHTML)) {
+            gameBoardValues[index] = nextPlayer;
+            document.getElementsByClassName("square")[index].innerHTML = nextPlayer;    
+        }
+     }
 
     return {
         placeSymbol,
-        getList
     };
 })();
 
@@ -26,6 +33,5 @@ var gameBoardOne = gameBoard;
 
 
 function onclickPlacing(index) {
-    alert(index)
-    gameBoardOne.placeSymbol(index)
+    gameBoardOne.placeSymbol(index);
 }
