@@ -6,19 +6,21 @@
     height: 100px;
     width: 100px;
     background-color: #ecfdf5;
-    color: #10b981;
     display: flex;
+    color: white;
     text-align: center;
     font-size: 500%;
     justify-content: center;
     align-items: center;
     border-radius: 7px;
     margin: 5px;
+    text-shadow: 0 0 2px #FFF, 0 0 7px #FFF, 0 0 5px #FFF, 0 0 10px #49ff18, 0 0 10px #49FF18, 0 0 12px #49FF18, 0 0 25px #49ff18, 2px 2px 0px rgba(206,89,55,0);
+
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: white;
+    background-color: rgb(15, 15, 15);
 }
 
 #gameBoardContainer {
@@ -31,7 +33,8 @@ body {
     -webkit-box-shadow: inset 0px 0px 12px -3px #000000; 
     box-shadow: inset 0px 0px 4px -3px #000000;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 70px;
+
 }
 #gameBoardContainer::after {
     position: absolute;
@@ -44,4 +47,15 @@ body {
     z-index: -1;
     border-radius: 12px;
     background: linear-gradient(45deg, #34d399, #10b981);
+    box-shadow: 0 0 2px #FFF, 0 0 7px #FFF, 0 0 5px #FFF, 0 0 10px #49ff18, 0 0 10px #49FF18, 0 0 12px #49FF18, 0 0 25px #49ff18, 2px 2px 0px rgba(206,89,55,0);
+
+}
+
+#topic {
+    text-shadow: 0 0 2px #FFF, 0 0 7px #FFF, 0 0 5px #FFF, 0 0 10px #49ff18, 0 0 10px #49FF18, 0 0 12px #49FF18, 0 0 25px #49ff18, 2px 2px 0px rgba(206,89,55,0);
+    color: white;
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
 }

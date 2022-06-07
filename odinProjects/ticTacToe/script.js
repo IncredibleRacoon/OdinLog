@@ -5,6 +5,7 @@ const gameBoard = (() => {
     let nextPlayer = "O"
 
     const checkIfWon = () => {
+
         
         for (let sign of  ["X", "O"]) {
 
@@ -14,7 +15,7 @@ const gameBoard = (() => {
                 gameBoardValues.slice(3, 6).filter((x) => x == sign).length == 3 ||
                 gameBoardValues.slice(6).filter((x) => x == sign).length == 3
             ) {
-                return "win"
+                winHappened();
             }
 
             // check for column win
@@ -23,7 +24,7 @@ const gameBoard = (() => {
                 gameBoardValues.filter((element, index) => index % 3 == 1 && element == sign).length == 3 ||
                 gameBoardValues.filter((element, index) => index % 3 == 2 && element == sign).length == 3
             ) {
-                return "win"
+                winHappened();
             }
 
             // check for diagonal win
@@ -31,11 +32,29 @@ const gameBoard = (() => {
                 gameBoardValues.filter((element, index) => index % 4 == 0 && element == sign).length == 3 ||
                 gameBoardValues.filter((element, index) => index % 2 == 0 && index > 1 && index < 7 && element == sign).length == 3
             ) {
-                return "win"
+                winHappened();
             }
-
+        }
+        if (gameBoardValues.filter((element, index) => element == "").length == 0) {
+            for (let index in Array(9).fill("")) {
+                gameBoardValues[index] = "";
+                document.getElementsByClassName("square")[index].innerHTML = "";        
+            }            
+            alert("Unentschieden");
         }
         
+    }
+
+    const winHappened = () => {
+        
+        alert("Gewonnen hat " + nextPlayer);
+
+        for (let index in Array(9).fill("")) {
+            gameBoardValues[index] = "";
+            document.getElementsByClassName("square")[index].innerHTML = "";        
+        }
+
+
     }
 
     const placeSymbol = (index) => { 
@@ -46,8 +65,8 @@ const gameBoard = (() => {
         }
 
         if (!(document.getElementsByClassName("square")[index].innerHTML)) {
-            gameBoardValues[index] = nextPlayer;
             document.getElementsByClassName("square")[index].innerHTML = nextPlayer;    
+            gameBoardValues[index] = nextPlayer;
         }
      }
 
@@ -65,7 +84,6 @@ var gameBoardOne = gameBoard;
 
 function onclickPlacing(index) {
     gameBoardOne.placeSymbol(index);
-    if (gameBoardOne.checkIfWon() == "win") {
-        alert("won")
-    }
+    gameBoardOne.checkIfWon();
 }
+
