@@ -1,14 +1,18 @@
 var books = [];
 
 
-function Book(title, author, pages, readYet, indexInList) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readYet = readYet;
-    this.indexInList = indexInList;
+class Book {
+    
 
-    this.drawBook = () => {
+    constructor(title, author, pages, readYet, indexInList) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readYet = readYet;
+        this.indexInList = indexInList;    
+    }
+
+    drawBook = () => {
 
         this.bookContainer = document.createElement("div");
         this.bookContainer.style.height = "fit-content";
