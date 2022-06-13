@@ -1,1 +1,3 @@
-alert("hallo und tschüss");
+import initialPage from "./initalPageComponent.js";
+
+initialPage();
